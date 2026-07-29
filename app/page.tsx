@@ -257,13 +257,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+            {/* Plan 0 - Lite */}
+            <div className="bg-white dark:bg-[#1A1A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col h-full">
+              <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Starter Lite</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Essential online presence</p>
+              <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">₹2,500<span className="text-lg text-gray-500 font-medium">/project</span></div>
+              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300 text-sm">
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Single Landing Page</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Responsive Mobile Design</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Contact Form Integration</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Free Subdomain Hosting</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Basic SEO Setup</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>1 Week Support</span></li>
+              </ul>
+              <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose Lite</a>
+            </div>
+
             {/* Plan 1 */}
             <div className="bg-gray-50 dark:bg-[#1A1A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">MVP Builder</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Perfect for testing your idea</p>
               <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">₹5,000<span className="text-lg text-gray-500 font-medium">/project</span></div>
-              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300">
+              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300 text-sm">
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Landing Page & Basic Auth</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Responsive Mobile Design</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Core Feature Implementation</span></li>
@@ -280,7 +296,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Startup Pro</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">For emerging businesses scaling up</p>
               <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">₹10,000<span className="text-lg text-gray-500 font-medium">/project</span></div>
-              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300">
+              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300 text-sm">
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Full-Stack Web App (React/Node)</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Payment Gateway (Razorpay/Stripe)</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Secure Admin Dashboard</span></li>
@@ -297,7 +313,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Enterprise</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Complex logic & massive scale</p>
               <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">Custom<span className="text-lg text-gray-500 font-medium">/quote</span></div>
-              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300">
+              <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300 text-sm">
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Scalable Cloud Architecture (AWS)</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Cross-Platform Mobile Apps</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Microservices & Load Balancing</span></li>
