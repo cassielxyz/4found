@@ -267,7 +267,9 @@ export default function Home() {
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Landing Page & Basic Auth</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Responsive Mobile Design</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Core Feature Implementation</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>1 Month Support</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Free Hosting Setup</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Google Analytics Integration</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>1 Month Support & Bug Fixes</span></li>
               </ul>
               <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose MVP</a>
             </div>
@@ -280,10 +282,12 @@ export default function Home() {
               <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">₹10,000<span className="text-lg text-gray-500 font-medium">/project</span></div>
               <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Full-Stack Web App (React/Node)</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>API Integrations & Database</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Admin Dashboard</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>SEO & Performance Optimization</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>3 Months Support</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Payment Gateway (Razorpay/Stripe)</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Secure Admin Dashboard</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Role-Based Access Control</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Automated Email Workflows</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Advanced SEO Optimization</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>3 Months Priority Support</span></li>
               </ul>
               <a href="#contact" className="btn-primary w-full py-3 rounded-xl block text-center font-semibold text-white shadow-lg">Choose Pro</a>
             </div>
@@ -294,11 +298,13 @@ export default function Home() {
               <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Complex logic & massive scale</p>
               <div className="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">Custom<span className="text-lg text-gray-500 font-medium">/quote</span></div>
               <ul className="flex flex-col gap-4 mb-8 flex-1 text-gray-700 dark:text-gray-300">
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Cloud Architecture Design</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Scalable Cloud Architecture (AWS)</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Cross-Platform Mobile Apps</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Microservices & High Availability</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Advanced Security & Compliance</span></li>
-                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Dedicated Team</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Microservices & Load Balancing</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Penetration Testing & Security</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Custom DevOps Pipelines (CI/CD)</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Dedicated Account Manager</span></li>
+                <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>24/7 SLA Support</span></li>
               </ul>
               <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Get a Quote</a>
             </div>
