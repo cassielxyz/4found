@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Code, Layout, Smartphone, Cloud, Search, Shield, Check, ExternalLink, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
 
@@ -271,7 +272,7 @@ export default function Home() {
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Basic SEO Setup</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>1 Week Support</span></li>
               </ul>
-              <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose Lite</a>
+              <Link href="/plan/lite" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose Lite</Link>
             </div>
 
             {/* Plan 1 */}
@@ -287,7 +288,7 @@ export default function Home() {
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Google Analytics Integration</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>1 Month Support & Bug Fixes</span></li>
               </ul>
-              <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose MVP</a>
+              <Link href="/plan/mvp" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Choose MVP</Link>
             </div>
 
             {/* Plan 2 */}
@@ -305,7 +306,7 @@ export default function Home() {
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Advanced SEO Optimization</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>3 Months Priority Support</span></li>
               </ul>
-              <a href="#contact" className="btn-primary w-full py-3 rounded-xl block text-center font-semibold text-white shadow-lg">Choose Pro</a>
+              <Link href="/plan/pro" className="btn-primary w-full py-3 rounded-xl block text-center font-semibold text-white shadow-lg">Choose Pro</Link>
             </div>
 
             {/* Plan 3 */}
@@ -322,7 +323,7 @@ export default function Home() {
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>Dedicated Account Manager</span></li>
                 <li className="flex items-start gap-3"><Check size={20} className="text-[#D32F2F] shrink-0 mt-0.5" /> <span>24/7 SLA Support</span></li>
               </ul>
-              <a href="#contact" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Get a Quote</a>
+              <Link href="/plan/enterprise" className="btn-secondary w-full py-3 rounded-xl block text-center font-semibold border-gray-300 dark:border-gray-700">Get a Quote</Link>
             </div>
           </div>
         </div>

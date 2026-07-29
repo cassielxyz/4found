@@ -10,7 +10,7 @@ const sanitize = (str: string) => {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, message, planName } = body;
 
     // Validate inputs
     if (!name || !email || !message) {
@@ -21,6 +21,7 @@ export async function POST(request: Request) {
     const safeName = sanitize(name);
     const safeEmail = sanitize(email);
     const safeMessage = sanitize(message);
+    const safePlanName = planName ? sanitize(planName) : "General Inquiry";
 
     // Create a Nodemailer transporter using SMTP
     // (User needs to configure these environment variables for this to work in production)
@@ -45,11 +46,14 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: `"4Found Contact Form" <${process.env.SMTP_USER || "dummy@example.com"}>`,
       to: recipients.join(", "),
-      subject: `New Lead: Message from ${safeName}`,
-      text: `You have received a new message from the 4Found landing page.\n\nName: ${safeName}\nEmail: ${safeEmail}\n\nMessage:\n${safeMessage}`,
+      subject: `New Lead: ${safePlanName} - ${safeName}`,
+      text: `You have received a new message from the 4Found landing page.\n\nPlan/Inquiry Type: ${safePlanName}\nName: ${safeName}\nEmail: ${safeEmail}\n\nMessage:\n${safeMessage}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #1A1A1A;">
-          <h2 style="color: #D32F2F;">New Message Received</h2>
+          <h2 style="color: #D32F2F;">New Lead from 4Found</h2>
+          <div style="background: #FFF1F0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #D32F2F; margin-bottom: 20px;">
+            <p style="margin: 0;"><strong>Inquiry Type:</strong> <span style="font-size: 1.1em; color: #D32F2F;">${safePlanName}</span></p>
+          </div>
           <p><strong>Name:</strong> ${safeName}</p>
           <p><strong>Email:</strong> ${safeEmail}</p>
           <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px;">
