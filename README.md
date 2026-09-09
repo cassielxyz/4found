@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center"><img src="assets/readme-hero.svg" alt="4found" width="100%"></p>
 
-## Getting Started
+# 4found
 
-First, run the development server:
+4found is the public web presence and product surface for a technology studio focused on building digital experiences, internal systems, and client-facing software. This repository contains the production website, its interactive presentation layer, reusable components, and server-side contact flow.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## What this repository contains
+
+- A Next.js App Router application written in TypeScript.
+- A responsive public landing experience with reusable navigation and footer components.
+- Theme-aware UI foundations and shared global design tokens.
+- Server-side contact handling under `app/api/contact`.
+- Plan/detail routes under `app/plan/[id]`.
+- Agent guidance and UI-development skills kept alongside the project for consistent autonomous development.
+
+## Architecture
+
+```text
+Browser
+  |
+  v
+Next.js App Router
+  |-- app/page.tsx              Public experience
+  |-- app/plan/[id]/page.tsx    Plan detail pages
+  |-- app/api/contact/route.ts  Server-side contact endpoint
+  |
+  +-- components/               Shared visual building blocks
+      |-- Navbar.tsx
+      |-- Footer.tsx
+      +-- ThemeProvider.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The repository intentionally keeps presentation components separate from API handling so future backend integrations can evolve without coupling them to page layout code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Requirements:
 
-## Learn More
+- Node.js 20 or newer recommended.
+- npm.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open the local URL printed by Next.js. Production builds should be verified before deployment:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+## Configuration and secrets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Do not commit local environment files or credentials. Store deployment secrets in the hosting provider and keep only placeholder/example configuration in Git.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recommended local pattern:
+
+```text
+.env.local          local values, never committed
+.env.example        placeholders only, safe to commit
+```
+
+Before adding a new integration, verify that browser-exposed variables contain only values that are intentionally public. Server credentials must remain server-only.
+
+## Repository layout
+
+| Path | Purpose |
+| --- | --- |
+| `app/` | Routes, layouts, pages, and server endpoints |
+| `components/` | Shared UI and theme components |
+| `.agents/` | Project-local agent instructions and reusable UI skills |
+| `public/` | Static web assets |
+| `next.config.ts` | Next.js configuration |
+| `eslint.config.mjs` | Linting configuration |
+
+## Development standards
+
+Changes should preserve responsive behavior, keyboard accessibility, semantic HTML, reduced-motion support, and good Core Web Vitals. Keep private credentials out of source, validate untrusted input at API boundaries, and prefer server-side handling for sensitive operations.
+
+## Deployment
+
+The application is suitable for a standard Next.js deployment workflow. Configure environment values in the deployment platform, run the production build, and smoke-test the public pages plus contact endpoint after each release.
+
+## Security notes
+
+- Never place API secrets in client components.
+- Validate and rate-limit public form endpoints when adding production integrations.
+- Keep `.env*`, private keys, certificates, and local service credentials ignored.
+- Rotate a credential immediately if it has ever been committed, even after deleting the file from the latest branch.
+
+## Status
+
+This repository is the active 4found web project. Project-specific implementation guidance is also available in `AGENTS.md` and the checked-in agent skill documentation.
